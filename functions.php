@@ -140,7 +140,9 @@ function twentythirteen_fonts_url() {
 			$font_families[] = 'Source Sans Pro:300,400,700,300italic,400italic,700italic';
 
 		if ( 'off' !== $bitter )
-			$font_families[] = 'Bitter:400,700';
+			$font_families[] = 'Oswald:400,700';
+
+		$font_families[] = 'PT Sans Narrow:400,700';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -245,6 +247,16 @@ function twentythirteen_widgets_init() {
 		'name'          => __( 'Secondary Widget Area', 'twentythirteen' ),
 		'id'            => 'sidebar-2',
 		'description'   => __( 'Appears on posts and pages in the sidebar.', 'twentythirteen' ),
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+	register_sidebar( array(
+		'name'          => __( 'Homepage Widget Area', 'twentythirteen' ),
+		'id'            => 'homepage-widget',
+		'description'   => __( 'Appears above foot on the homepage', 'twentythirteen' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</aside>',
 		'before_title'  => '<h3 class="widget-title">',
