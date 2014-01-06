@@ -29,7 +29,9 @@
  * @see twentythirteen_content_width() for template-specific adjustments.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 604;
+	/* BREAK
+	$content_width = 604; */
+	$content_width = 664;
 
 /**
  * Add support for a custom header image.
@@ -101,7 +103,9 @@ function twentythirteen_setup() {
 	 * "standard" posts and pages.
 	 */
 	add_theme_support( 'post-thumbnails' );
-	set_post_thumbnail_size( 604, 270, true );
+	/* BREAK
+	set_post_thumbnail_size( 604, 270, true ); */
+	set_post_thumbnail_size( 664, 270, true );
 	//set_post_thumbnail_size( 245, 200, true );
 
 	// This theme uses its own gallery styles.

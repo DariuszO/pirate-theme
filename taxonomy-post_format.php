@@ -19,8 +19,8 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( '%s Archives', 'twentythirteen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' ); ?></h1>
+			<header id="page-title" class="archive-header">
+				<h1><?php printf( __( '%s Archives', 'twentythirteen' ), '<span>' . get_post_format_string( get_post_format() ) . '</span>' ); ?></h1>
 			</header><!-- .archive-header -->
 
 			<?php /* The loop */ ?>

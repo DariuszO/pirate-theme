@@ -78,4 +78,7 @@
 			isRTL: body.is( '.rtl' )
 		} );
 	}
+	/* Check if touch screen device */
+	document.documentElement.className += (("ontouchstart" in document.documentElement) ? ' touch' : ' no-touch');
+
 } )( jQuery );
