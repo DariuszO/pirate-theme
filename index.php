@@ -17,9 +17,9 @@
 get_header(); ?>
 
 	<div id="primary" class="content-area">
-		<div id="page-title">
+		<header id="page-title">
 			<h1>DU Pirate Party News</h1>
-		</div>
+		</header>
 		<div id="content" class="site-content" role="main">
 		<?php if ( have_posts() ) : ?>
 

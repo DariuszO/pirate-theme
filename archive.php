@@ -23,8 +23,8 @@ get_header(); ?>
 		<div id="content" class="site-content" role="main">
 
 		<?php if ( have_posts() ) : ?>
-			<header class="archive-header">
-				<h1 class="archive-title"><?php
+			<header id="page-title">
+				<h1><?php
 					if ( is_day() ) :
 						printf( __( 'Daily Archives: %s', 'twentythirteen' ), get_the_date() );
 					elseif ( is_month() ) :

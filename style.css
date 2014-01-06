@@ -775,10 +775,21 @@ img.wp-smiley,
   text-align: left;
 }
 
+.clearfix{
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
 /**
  * 3.0 Basic Structure
  * ----------------------------------------------------------------------------
  */
+
+ body {
+ 	padding: 0 20px;
+ }
 
 .site {
 	background-color: #fff;
@@ -1384,6 +1395,149 @@ body.home .home-quicklinks h3 {
 	text-transform: uppercase;
 	text-align: right;
 	font-size: 35px;
+}
+
+#latest-news-widget li {
+	width:245px;
+	position: relative;
+	display: inline-block;
+	margin: 0 20px 5px 0;
+	overflow: hidden;
+}
+#latest-news-widget ul > li:last-of-type
+{
+	margin-right: 0px;
+}
+#latest-news-widget li .lntitle, .fb-event-title {
+	color: #399dc5;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0px; 
+}
+.lndetails {
+   position: absolute; 
+   bottom: -100%;
+   left: 0; 
+   padding: 15px;
+   background-color: #212121;
+   color: #ffffff;
+   line-height: 1;
+   /*additional styles*/
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+#latest-news-widget li:hover .lndetails{
+    bottom:0;
+}
+
+
+.lndetails time,  .fb-event-time {
+	color: #818181;
+}
+
+.lndetails .lnsummary, .fb-event-description{
+	border-top: 1px solid #818181;
+	padding-top: 12px;
+	margin-top: 8px;
+	color: #FFFFFF;
+}
+
+.latest-news-image-link {
+	height: 200px;
+	width: 250px;
+	display: block;
+}
+
+/**
+* Facebook events
+**/
+
+.fb-event {
+    background-color: #212121;
+    min-height: 150px;
+    overflow: hidden;
+}
+
+.fb-event a.fb-event-anchor {
+    display:block;
+    position: relative;
+    color: #FFFFFF !important;
+}
+
+.fb-event a.fb-event-anchor:hover {
+    text-decoration: none !important;
+}
+
+.fb-event-info {
+	/*
+    max-width: 20%;
+    min-width: 200px;*/
+    padding: 20px;
+    max-width: 390px;
+    z-index: 5;
+    word-wrap: break-word;
+    background-color: #212121;
+    position: relative;
+    border-right: 1px solid #818181;
+}
+
+.fb-event-cal-head {
+    color: #000000;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 4px 0 5px;
+    text-transform: uppercase;
+}
+
+.fb-event img {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 650px;
+}
+
+.fb-event-description{
+	margin-bottom: 5px;
+}
+
+.fb-event-time  {
+    display: block;
+}
+.fb-event-meta {
+	color: #818181;
+}
+.fb-event-title {
+	font-size: 18px;
+}
+
+/* VPN page */
+.vpn-page label { 
+	display: block;
+	font-weight: bold;
+}
+
+.vpn-page .formrow { 
+	margin-top: 10px;
+}
+
+.vpn-page input {
+	padding: 5px;
+	float: left;
+	margin-right:10px;
+}
+
+.vpn-page .error {
+	color: red;
+	display: block;
+	float:left;
+	padding: 5px 0px;
+}
+
+#registerform {
+	margin-bottom: 24px;
 }
 
 /**
@@ -2565,8 +2719,12 @@ body.home .home-quicklinks h3 {
 	-ms-hyphens:     auto;
 	hyphens:         auto;
 	margin: 0 0 24px;
-	padding: 20px;
+	padding: 20px 0;
 	word-wrap: break-word;
+}
+
+.sidebar-container .widget {
+	padding: 20px;
 }
 
 .widget .widget-title {
@@ -2657,6 +2815,17 @@ body.home .home-quicklinks h3 {
 	background-color: transparent;
 }
 
+/*
+#homepage-content .widget {
+	position: relative;
+}
+
+#homepage-content .widget h3 + div {
+	direction: rtl;
+	position: relative;
+	top: 0;
+	right: 0;
+}*/
 
 /**
  * 7.0 Footer
@@ -3035,43 +3204,3 @@ body.home .home-quicklinks h3 {
 		background-color: transparent;
 		color: #141412;
 	}
-
-	.toggled-on .nav-menu li a:hover,
-	.toggled-on .nav-menu 
-
-/* New items */
-
-#latest-news-widget li {
- width:260px;
- position: relative;
- display:inline-block;
- margin: 0 20px 35px 0;
-}
-#latest-news-widget > li:last-child
-{
-    margin-right:0;
-}
-#latest-news-widget li .rpwe-title {
- color: #399dc5;
- font-size: 14px;
- font-weight: normal;
- margin: 0px; 
-}
-.snippet-text-section {
-   position: absolute; 
-   bottom: 0px; 
-   left: 0; 
-   padding: 15px;
-   background-color: #212121;
-   color: #ffffff;
-   line-height: 1;
-}
-.snippet-text-section time {
-	color: #818181;
-}
-
-.snippet-text-section .rpwe-summary{
-	border-top: 1px solid #818181;
-	padding-top: 12px;
-	margin-top: 8px;
-}
